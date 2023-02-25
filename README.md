@@ -1,16 +1,10 @@
-### Hi there 👋
-
-<!--
-**chevgan/chevgan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Hi! This is my creative studio
+______________________________________________________
+### My name is Danil. I am 25 years old. I am from Kazakhstan, I live in Almaty. I am always ready to learn and develop my skills to become a successful Frontend Developer
+______________________________________________________
+### My technology stack
+<img src="https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=HTML5&logoColor=orange"/> <img src="https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=CSS3&logoColor=blue"/> <img src="https://img.shields.io/badge/SASS-black?style=for-the-badge&logo=SASS&logoColor=pink"/> <img src="https://img.shields.io/badge/JAVASCRIPT-black?style=for-the-badge&logo=JAVASCRIPT&logoColor=yellow"/> <img src="https://img.shields.io/badge/REACT-black?style=for-the-badge&logo=REACT&logoColor=#61DAFB"/> <img src="https://img.shields.io/badge/REDUX-black?style=for-the-badge&logo=Redux&logoColor=#764ABC"/> <img src="https://img.shields.io/badge/TYPESCRIPT-black?style=for-the-badge&logo=TypeScript&logoColor=#3178C6"/>
+______________________________________________________
+### Follow me
+[![Telegram](https://img.shields.io/badge/-Telegram-090909?style=for-the-badge&logo=telegram&logoColor=27A0D9)](https://t.me/@mrkotz)
+______________________________________________________
