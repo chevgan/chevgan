@@ -1,6 +1,6 @@
 <h1 align="center">Hi there, I'm <a href="https://github.com/chevgan" target="_blank">Danil</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h3 align="center">I am 25 years old. I am from Kazakhstan, I live in Almaty</h3>
+<h3 align="center">I am 27 years old. I am from Kazakhstan, I live in Almaty</h3>
 
 ### I am always ready to learn and develop my skills to become a successful Frontend Developer
 ______________________________________________________
