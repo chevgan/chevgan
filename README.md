@@ -1,13 +1,53 @@
-<h1 align="center">Hi there, I'm <a href="https://github.com/chevgan" target="_blank">Danil</a> 
-<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h3 align="center">I am 27 years old. I am from Kazakhstan, I live in Almaty</h3>
+<div align="center">
+  <img height="200" src="https://s.iimg.su/s/25/gsUzb0HxPcjmSKYKP4SPQzXeJReetf4jYQqKs7KV.png"  />
+</div>
 
-### I am always ready to learn and develop my skills to become a successful Frontend Developer
-______________________________________________________
-### My technology stack
-<img src="https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=HTML5&logoColor=orange"/> <img src="https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=CSS3&logoColor=blue"/> <img src="https://img.shields.io/badge/SASS-black?style=for-the-badge&logo=SASS&logoColor=pink"/> <img src="https://img.shields.io/badge/JAVASCRIPT-black?style=for-the-badge&logo=JAVASCRIPT&logoColor=yellow"/> <img src="https://img.shields.io/badge/REACT-black?style=for-the-badge&logo=REACT&logoColor=#61DAFB"/> <img src="https://img.shields.io/badge/REDUX-black?style=for-the-badge&logo=Redux&logoColor=#764ABC"/> <img src="https://img.shields.io/badge/TYPESCRIPT-black?style=for-the-badge&logo=TypeScript&logoColor=#3178C6"/>
-______________________________________________________
-### Follow me
-[![Telegram](https://img.shields.io/badge/-Telegram-090909?style=for-the-badge&logo=telegram&logoColor=27A0D9)](https://t.me/mrkotz)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-090909?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://www.linkedin.com/in/chevgan/)
-______________________________________________________
+###
+
+<h3 align="center">I am 27 years old. I am from Kazakhstan, I live in Almaty<br>I am always ready to learn and develop my skills to become a successful Frontend Developer</h3>
+
+###
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=chevgan&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=chevgan&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
+</div>
+
+###
+
+<h2 align="left">I code with</h2>
+
+###
+
+<img align="right" height="120" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazlzYmZhaXVuaGg0cTlicnU0ajEzYTV4Y2ttYjg4N3c3OW9hOTJsOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JIX9t2j0ZTN9S/giphy.gif"  />
+
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="40" alt="jest logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" height="40" alt="storybook logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" height="40" alt="jquery logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" height="40" alt="vuejs logo"  />
+</div>
+
+###
+
+<div align="left">
+  <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="30" alt="linkedin logo"  />
+  <img src="https://img.shields.io/static/v1?message=Telegram&logo=telegram&label=&color=2CA5E0&logoColor=white&labelColor=&style=for-the-badge" height="30" alt="telegram logo"  />
+</div>
+
+###
