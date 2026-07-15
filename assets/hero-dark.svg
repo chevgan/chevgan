@@ -1,0 +1,134 @@
+<svg width="900" height="290" viewBox="0 0 900 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#e879f9"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-0.5 0; 0.5 0; -0.5 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#e879f9" stop-opacity="0.55"/>
+    </linearGradient>
+    <radialGradient id="blob1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blob2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blob3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <clipPath id="cardClip">
+      <rect x="2" y="2" width="896" height="286" rx="18"/>
+    </clipPath>
+    <clipPath id="typeClip">
+      <rect class="type-w" x="58" y="196" width="460" height="34"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .base { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; }
+    .mono { font-family: 'SFMono-Regular', 'Fira Code', Consolas, Menlo, monospace; }
+
+    .hello   { fill: #8b949e; font-size: 17px; letter-spacing: 4px; font-weight: 600; }
+    .name    { fill: url(#nameGrad); font-size: 58px; font-weight: 800; letter-spacing: -1px; }
+    .typed   { fill: #7ee787; font-size: 18px; }
+    .chip-t  { fill: #c9d1d9; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
+
+    /* --- typewriter: 3 phrases on a 15s loop --- */
+    .p2, .p3 { opacity: 0; }
+    .p1 { animation: show1 15s linear infinite; }
+    .p2 { animation: show2 15s linear infinite; }
+    .p3 { animation: show3 15s linear infinite; }
+    @keyframes show1 { 0%,29% { opacity: 1; } 31%,100% { opacity: 0; } }
+    @keyframes show2 { 0%,33% { opacity: 0; } 34%,62% { opacity: 1; } 64%,100% { opacity: 0; } }
+    @keyframes show3 { 0%,66% { opacity: 0; } 67%,96% { opacity: 1; } 98%,100% { opacity: 0; } }
+
+    .type-w { animation: typew 15s infinite; }
+    @keyframes typew {
+      0%    { width: 0;     animation-timing-function: steps(42); }
+      13%   { width: 460px; }
+      31%   { width: 460px; animation-timing-function: steps(1); }
+      33%   { width: 0;     animation-timing-function: steps(55); }
+      47%   { width: 600px; }
+      64%   { width: 600px; animation-timing-function: steps(1); }
+      66%   { width: 0;     animation-timing-function: steps(43); }
+      79%   { width: 464px; }
+      96%   { width: 464px; animation-timing-function: steps(1); }
+      97%,100% { width: 0; }
+    }
+    .cursor { transform: translateX(460px); animation: curx 15s infinite, blink 1s step-end infinite; }
+    @keyframes curx {
+      0%    { transform: translateX(0);     animation-timing-function: steps(42); }
+      13%   { transform: translateX(460px); }
+      31%   { transform: translateX(460px); animation-timing-function: steps(1); }
+      33%   { transform: translateX(0);     animation-timing-function: steps(55); }
+      47%   { transform: translateX(600px); }
+      64%   { transform: translateX(600px); animation-timing-function: steps(1); }
+      66%   { transform: translateX(0);     animation-timing-function: steps(43); }
+      79%   { transform: translateX(464px); }
+      96%   { transform: translateX(464px); animation-timing-function: steps(1); }
+      97%,100% { transform: translateX(0); }
+    }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .float { animation: floaty 7s ease-in-out infinite; }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+    .fadein { animation: fin 0.9s ease-out backwards; }
+    .d1 { animation-delay: 0.15s; } .d2 { animation-delay: 0.35s; } .d3 { animation-delay: 0.55s; }
+    @keyframes fin { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+
+  <!-- card -->
+  <rect x="2" y="2" width="896" height="286" rx="18" fill="#0d1117"/>
+  <g clip-path="url(#cardClip)">
+    <rect x="2" y="2" width="896" height="286" fill="url(#grid)"/>
+    <circle cx="120" cy="60" r="220" fill="url(#blob1)">
+      <animate attributeName="cx" values="120;220;120" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="60;140;60" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="780" cy="240" r="240" fill="url(#blob2)">
+      <animate attributeName="cx" values="780;660;780" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="240;120;240" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="-40" r="190" fill="url(#blob3)">
+      <animate attributeName="cx" values="520;600;520" dur="14s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- floating code glyph -->
+    <g class="float" opacity="0.16">
+      <text x="716" y="150" class="mono" font-size="120" font-weight="700" fill="#58a6ff">&lt;/&gt;</text>
+    </g>
+  </g>
+  <rect x="2" y="2" width="896" height="286" rx="18" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- content -->
+  <text x="60" y="86" class="base hello fadein d1">HI THERE, I'M</text>
+  <text x="56" y="152" class="base name fadein d2">Danil Chevgan</text>
+
+  <!-- typing line -->
+  <g class="fadein d3">
+    <g class="p p1" clip-path="url(#typeClip)">
+      <text x="58" y="220" class="mono typed">$ frontend developer · typescript · react</text>
+    </g>
+    <g class="p p2" clip-path="url(#typeClip)">
+      <text x="58" y="220" class="mono typed">$ open source: render-peek · react-ai-voice-visualizer</text>
+    </g>
+    <g class="p p3" clip-path="url(#typeClip)">
+      <text x="58" y="220" class="mono typed">$ frontend by day · multi-agent ai by night</text>
+    </g>
+    <g class="cursor">
+      <rect x="60" y="204" width="10" height="20" fill="#7ee787"/>
+    </g>
+  </g>
+
+</svg>

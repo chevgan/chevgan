@@ -1,0 +1,133 @@
+<svg width="900" height="400" viewBox="0 0 900 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#e879f9"/>
+    </linearGradient>
+    <radialGradient id="screenGlow" cx="50%" cy="100%" r="80%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="promptClip">
+      <rect class="prompt-w" x="24" y="52" width="0" height="26"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono { font-family: 'SFMono-Regular', 'Fira Code', Consolas, Menlo, monospace; }
+    .prompt  { fill: #c9d1d9; font-size: 15px; }
+    .green   { fill: #7ee787; }
+    .blue    { fill: #79c0ff; }
+    .key     { fill: #ff7b72; font-size: 14px; font-weight: 600; }
+    .val     { fill: #c9d1d9; font-size: 14px; }
+    .dim     { fill: #8b949e; font-size: 14px; }
+
+    .prompt-w { animation: ptype 1.8s steps(25) 0.4s backwards; width: 232px; }
+    @keyframes ptype { from { width: 0; } to { width: 232px; } }
+
+    .ln { animation: lin 0.45s ease-out backwards; }
+    @keyframes lin { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .l0  { animation-delay: 2.1s; }
+    .l1  { animation-delay: 2.25s; }
+    .l2  { animation-delay: 2.4s; }
+    .l3  { animation-delay: 2.55s; }
+    .l4  { animation-delay: 2.7s; }
+    .l5  { animation-delay: 2.85s; }
+    .l6  { animation-delay: 3.0s; }
+    .l7  { animation-delay: 3.15s; }
+    .l8  { animation-delay: 3.3s; }
+    .l9  { animation-delay: 3.45s; }
+    .l10 { animation-delay: 3.6s; }
+    .l11 { animation-delay: 3.75s; }
+
+    .cur { animation: curon 0.1s 4.1s backwards; }
+    .curblock { animation: blink 1s step-end 4.1s infinite; }
+    @keyframes curon { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* --- typing cat --- */
+    .paw-l { animation: tap 0.32s ease-in-out infinite alternate; }
+    .paw-r { animation: tap 0.32s ease-in-out 0.16s infinite alternate; }
+    @keyframes tap { from { transform: translateY(0); } to { transform: translateY(-7px); } }
+    .eye { transform-box: fill-box; transform-origin: center; animation: blinkeye 4.2s infinite; }
+    @keyframes blinkeye { 0%, 90%, 100% { transform: scaleY(1); } 93%, 96% { transform: scaleY(0.08); } }
+    .glow { animation: gpulse 2.2s ease-in-out infinite; }
+    @keyframes gpulse { 0%,100% { opacity: 0.75; } 50% { opacity: 0.35; } }
+    .head { transform-box: fill-box; transform-origin: 50% 90%; animation: nod 5.5s ease-in-out infinite; }
+    @keyframes nod { 0%,100% { transform: rotate(0deg); } 30% { transform: rotate(-2.5deg); } 65% { transform: rotate(2.5deg); } }
+  </style>
+
+  <!-- window -->
+  <rect x="1" y="1" width="898" height="398" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="1" y="1" width="898" height="36" rx="14" fill="#161b22"/>
+  <rect x="1" y="23" width="898" height="15" fill="#161b22"/>
+  <line x1="1" y1="38" x2="899" y2="38" stroke="#30363d"/>
+  <circle cx="24" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="19" r="6" fill="#27c93f"/>
+  <text x="450" y="24" text-anchor="middle" class="mono dim" font-size="12">danil@almaty — zsh</text>
+
+  <!-- prompt -->
+  <g clip-path="url(#promptClip)">
+    <text x="24" y="70" class="mono prompt"><tspan class="green">danil@almaty</tspan><tspan fill="#8b949e"> ~ %</tspan><tspan class="blue"> neofetch</tspan></text>
+  </g>
+
+  <!-- typing cat -->
+  <g class="ln l0">
+    <!-- tail -->
+    <path d="M 182 268 Q 218 258 212 216" stroke="url(#logoGrad)" stroke-width="10" stroke-linecap="round" fill="none">
+      <animateTransform attributeName="transform" type="rotate" values="0 182 268; 13 182 268; 0 182 268" dur="1.6s" repeatCount="indefinite"/>
+    </path>
+    <!-- body -->
+    <ellipse cx="122" cy="248" rx="60" ry="48" fill="#161b22" stroke="url(#logoGrad)" stroke-width="3"/>
+    <!-- head -->
+    <g class="head">
+      <path d="M 92 148 L 84 112 L 116 134 Z" fill="url(#logoGrad)"/>
+      <path d="M 152 148 L 160 112 L 128 134 Z" fill="url(#logoGrad)"/>
+      <circle cx="122" cy="176" r="40" fill="#161b22" stroke="url(#logoGrad)" stroke-width="3"/>
+      <path d="M 106 148 q 4 8 0 14 M 118 144 q 3 8 0 15 M 130 145 q 3 8 0 14" stroke="url(#logoGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <g class="eye"><ellipse cx="107" cy="180" rx="5.5" ry="6.5" fill="#79c0ff"/></g>
+      <g class="eye"><ellipse cx="137" cy="180" rx="5.5" ry="6.5" fill="#79c0ff"/></g>
+      <path d="M 118 193 q 4 4 8 0" stroke="#e879f9" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M 84 186 h -16 M 85 193 l -15 5 M 160 186 h 16 M 159 193 l 15 5" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    </g>
+    <!-- laptop -->
+    <ellipse cx="122" cy="266" rx="66" ry="20" fill="url(#screenGlow)" class="glow"/>
+    <rect x="58" y="262" width="128" height="58" rx="9" fill="#0d1117" stroke="url(#logoGrad)" stroke-width="2.5"/>
+    <text x="122" y="298" text-anchor="middle" class="mono" font-size="18" font-weight="700" fill="url(#logoGrad)">&lt;/&gt;</text>
+    <!-- paws -->
+    <g class="paw-l"><ellipse cx="92" cy="262" rx="13" ry="9" fill="#161b22" stroke="url(#logoGrad)" stroke-width="2.5"/></g>
+    <g class="paw-r"><ellipse cx="152" cy="262" rx="13" ry="9" fill="#161b22" stroke="url(#logoGrad)" stroke-width="2.5"/></g>
+    <text x="122" y="350" text-anchor="middle" class="mono dim">frontend · est. 2019</text>
+  </g>
+
+  <!-- info -->
+  <g class="ln l1"><text x="270" y="112" class="mono"><tspan class="green" font-weight="700">danil</tspan><tspan class="dim">@</tspan><tspan class="blue" font-weight="700">github.com/chevgan</tspan></text></g>
+  <g class="ln l2"><text x="270" y="132" class="mono dim">─────────────────────────────────────</text></g>
+  <g class="ln l3"><text x="270" y="158" class="mono"><tspan class="key">Role</tspan><tspan class="dim">........ </tspan><tspan class="val">Frontend Developer</tspan></text></g>
+  <g class="ln l4"><text x="270" y="182" class="mono"><tspan class="key">Location</tspan><tspan class="dim">.... </tspan><tspan class="val">Almaty, Kazakhstan · UTC+5</tspan></text></g>
+  <g class="ln l5"><text x="270" y="206" class="mono"><tspan class="key">Now</tspan><tspan class="dim">......... </tspan><tspan class="val">building multi-agent systems w/ MCP</tspan></text></g>
+  <g class="ln l6"><text x="270" y="230" class="mono"><tspan class="key">Ship</tspan><tspan class="dim">........ </tspan><tspan class="val">TypeScript · React · Next.js · Vue</tspan></text></g>
+  <g class="ln l7"><text x="270" y="254" class="mono"><tspan class="key">OSS</tspan><tspan class="dim">......... </tspan><tspan class="val">render-peek · react-ai-voice-visualizer</tspan></text></g>
+  <g class="ln l8"><text x="270" y="278" class="mono"><tspan class="key">Telegram</tspan><tspan class="dim">.... </tspan><tspan class="val">@daniljzzi</tspan></text></g>
+  <g class="ln l9"><text x="270" y="302" class="mono"><tspan class="key">Email</tspan><tspan class="dim">....... </tspan><tspan class="val">danil.chevgan.00@gmail.com</tspan></text></g>
+
+  <!-- palette -->
+  <g class="ln l10">
+    <rect x="270" y="324" width="22" height="14" fill="#ff7b72"/>
+    <rect x="292" y="324" width="22" height="14" fill="#ffa657"/>
+    <rect x="314" y="324" width="22" height="14" fill="#e3b341"/>
+    <rect x="336" y="324" width="22" height="14" fill="#7ee787"/>
+    <rect x="358" y="324" width="22" height="14" fill="#79c0ff"/>
+    <rect x="380" y="324" width="22" height="14" fill="#818cf8"/>
+    <rect x="402" y="324" width="22" height="14" fill="#e879f9"/>
+    <rect x="424" y="324" width="22" height="14" fill="#c9d1d9"/>
+  </g>
+
+  <!-- new prompt + cursor -->
+  <g class="cur">
+    <text x="270" y="368" class="mono prompt"><tspan class="green">danil@almaty</tspan><tspan fill="#8b949e"> ~ %</tspan></text>
+    <rect class="curblock" x="424" y="354" width="9" height="17" fill="#c9d1d9"/>
+  </g>
+</svg>
