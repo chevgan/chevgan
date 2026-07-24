@@ -1,0 +1,63 @@
+<svg width="440" height="200" viewBox="0 0 440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#c026d3"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c026d3" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .b { font-family: 'Segoe UI', Ubuntu, sans-serif; }
+    .m { font-family: 'SFMono-Regular', Consolas, Menlo, monospace; }
+    .row { opacity: 0; animation: fin 0.5s ease-out forwards; }
+    .r0 { animation-delay: 0.15s; } .r1 { animation-delay: 0.27s; } .r2 { animation-delay: 0.39s; } .r3 { animation-delay: 0.51s; } .r4 { animation-delay: 0.63s; } .r5 { animation-delay: 0.75s; }
+    @keyframes fin { to { opacity: 1; } }
+    .bar { transform: scaleX(0); transform-origin: 24px 0; animation: grow 1s ease-out 0.3s forwards; }
+    @keyframes grow { to { transform: scaleX(1); } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+  </style>
+  <rect x="1" y="1" width="438" height="198" rx="14" fill="#ffffff"/>
+  <rect x="1" y="1" width="438" height="198" rx="14" stroke="url(#gb)" stroke-width="1.5"/>
+
+  <text x="24" y="38" class="b" font-size="17" font-weight="700" fill="url(#g)">most used languages</text>
+  <g class="bar"><rect x="24" y="56" width="163.32400299903603" height="10" fill="#3178c6"/><rect x="187.32400299903603" y="56" width="86.47120568388732" height="10" fill="#e34c26"/><rect x="273.7952086829233" y="56" width="74.47764409058992" height="10" fill="#f1e05a"/><rect x="348.27285277351325" y="56" width="31.85026241565211" height="10" fill="#c6538c"/><rect x="380.12311518916533" y="56" width="25.22164304330751" height="10" fill="#663399"/><rect x="405.3447582324728" y="56" width="8.241600913991931" height="10" fill="#a53b70"/></g>
+  <rect x="24" y="56" width="392" height="10" rx="5" fill="none" stroke="#d0d7de"/>
+  
+  <g class="row r0">
+    <circle cx="32" cy="96" r="5" fill="#3178c6"/>
+    <text x="46" y="101" class="b" font-size="13" fill="#24292f">TypeScript</text>
+    <text x="180" y="101" text-anchor="end" class="m" font-size="12" fill="#57606a">41.7%</text>
+  </g>
+  <g class="row r1">
+    <circle cx="232" cy="96" r="5" fill="#e34c26"/>
+    <text x="246" y="101" class="b" font-size="13" fill="#24292f">HTML</text>
+    <text x="380" y="101" text-anchor="end" class="m" font-size="12" fill="#57606a">22.1%</text>
+  </g>
+  <g class="row r2">
+    <circle cx="32" cy="124" r="5" fill="#f1e05a"/>
+    <text x="46" y="129" class="b" font-size="13" fill="#24292f">JavaScript</text>
+    <text x="180" y="129" text-anchor="end" class="m" font-size="12" fill="#57606a">19.0%</text>
+  </g>
+  <g class="row r3">
+    <circle cx="232" cy="124" r="5" fill="#c6538c"/>
+    <text x="246" y="129" class="b" font-size="13" fill="#24292f">SCSS</text>
+    <text x="380" y="129" text-anchor="end" class="m" font-size="12" fill="#57606a">8.1%</text>
+  </g>
+  <g class="row r4">
+    <circle cx="32" cy="152" r="5" fill="#663399"/>
+    <text x="46" y="157" class="b" font-size="13" fill="#24292f">CSS</text>
+    <text x="180" y="157" text-anchor="end" class="m" font-size="12" fill="#57606a">6.4%</text>
+  </g>
+  <g class="row r5">
+    <circle cx="232" cy="152" r="5" fill="#a53b70"/>
+    <text x="246" y="157" class="b" font-size="13" fill="#24292f">Sass</text>
+    <text x="380" y="157" text-anchor="end" class="m" font-size="12" fill="#57606a">2.1%</text>
+  </g>
+</svg>

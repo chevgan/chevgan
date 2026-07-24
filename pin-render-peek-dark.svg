@@ -1,0 +1,35 @@
+<svg width="440" height="140" viewBox="0 0 440 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#e879f9"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#e879f9" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .b { font-family: 'Segoe UI', Ubuntu, sans-serif; }
+    .m { font-family: 'SFMono-Regular', Consolas, Menlo, monospace; }
+    .row { opacity: 0; animation: fin 0.5s ease-out forwards; }
+    .r0 { animation-delay: 0.15s; } .r1 { animation-delay: 0.27s; } .r2 { animation-delay: 0.39s; } .r3 { animation-delay: 0.51s; } .r4 { animation-delay: 0.63s; } .r5 { animation-delay: 0.75s; }
+    @keyframes fin { to { opacity: 1; } }
+    .bar { transform: scaleX(0); transform-origin: 24px 0; animation: grow 1s ease-out 0.3s forwards; }
+    @keyframes grow { to { transform: scaleX(1); } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+  </style>
+  <rect x="1" y="1" width="438" height="138" rx="14" fill="#0d1117"/>
+  <rect x="1" y="1" width="438" height="138" rx="14" stroke="url(#gb)" stroke-width="1.5"/>
+
+  <text x="24" y="36" class="m" font-size="16" font-weight="700" fill="url(#g)">render-peek</text>
+  <text x="24" y="62" class="b row r0" font-size="13" fill="#8b949e">A lightweight React Hook for visually detecting</text><text x="24" y="82" class="b row r1" font-size="13" fill="#8b949e">unnecessary re-renders.</text>
+  <circle cx="30" cy="116" r="5" fill="#3178c6"/>
+  <text x="42" y="121" class="b" font-size="13" fill="#c9d1d9">TypeScript</text>
+  <text x="330" y="121" class="m" font-size="13" fill="#8b949e">★ 3</text>
+  <text x="386" y="121" class="m" font-size="13" fill="#8b949e">⑂ 0</text>
+</svg>

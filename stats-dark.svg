@@ -1,0 +1,62 @@
+<svg width="440" height="240" viewBox="0 0 440 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#e879f9"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#e879f9" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .b { font-family: 'Segoe UI', Ubuntu, sans-serif; }
+    .m { font-family: 'SFMono-Regular', Consolas, Menlo, monospace; }
+    .row { opacity: 0; animation: fin 0.5s ease-out forwards; }
+    .r0 { animation-delay: 0.15s; } .r1 { animation-delay: 0.27s; } .r2 { animation-delay: 0.39s; } .r3 { animation-delay: 0.51s; } .r4 { animation-delay: 0.63s; } .r5 { animation-delay: 0.75s; }
+    @keyframes fin { to { opacity: 1; } }
+    .bar { transform: scaleX(0); transform-origin: 24px 0; animation: grow 1s ease-out 0.3s forwards; }
+    @keyframes grow { to { transform: scaleX(1); } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+  </style>
+  <rect x="1" y="1" width="438" height="238" rx="14" fill="#0d1117"/>
+  <rect x="1" y="1" width="438" height="238" rx="14" stroke="url(#gb)" stroke-width="1.5"/>
+
+  <text x="24" y="38" class="b" font-size="17" font-weight="700" fill="url(#g)">chevgan — github stats</text>
+  <circle cx="416" cy="33" r="4" fill="#7ee787" class="pulse"/>
+  
+  <g class="row r0">
+    <text x="26" y="72" class="m" font-size="14" fill="url(#g)">★</text>
+    <text x="52" y="72" class="b" font-size="14" fill="#8b949e">Total stars</text>
+    <text x="416" y="72" text-anchor="end" class="m" font-size="14" font-weight="700" fill="#c9d1d9">6</text>
+  </g>
+  <g class="row r1">
+    <text x="26" y="98" class="m" font-size="14" fill="url(#g)">◆</text>
+    <text x="52" y="98" class="b" font-size="14" fill="#8b949e">Contributions 2026</text>
+    <text x="416" y="98" text-anchor="end" class="m" font-size="14" font-weight="700" fill="#c9d1d9">53</text>
+  </g>
+  <g class="row r2">
+    <text x="26" y="124" class="m" font-size="14" fill="url(#g)">⇅</text>
+    <text x="52" y="124" class="b" font-size="14" fill="#8b949e">Pull requests</text>
+    <text x="416" y="124" text-anchor="end" class="m" font-size="14" font-weight="700" fill="#c9d1d9">1</text>
+  </g>
+  <g class="row r3">
+    <text x="26" y="150" class="m" font-size="14" fill="url(#g)">◉</text>
+    <text x="52" y="150" class="b" font-size="14" fill="#8b949e">Issues</text>
+    <text x="416" y="150" text-anchor="end" class="m" font-size="14" font-weight="700" fill="#c9d1d9">2</text>
+  </g>
+  <g class="row r4">
+    <text x="26" y="176" class="m" font-size="14" fill="url(#g)">▣</text>
+    <text x="52" y="176" class="b" font-size="14" fill="#8b949e">Public repos</text>
+    <text x="416" y="176" text-anchor="end" class="m" font-size="14" font-weight="700" fill="#c9d1d9">26</text>
+  </g>
+  <g class="row r5">
+    <text x="26" y="202" class="m" font-size="14" fill="url(#g)">●</text>
+    <text x="52" y="202" class="b" font-size="14" fill="#8b949e">Followers</text>
+    <text x="416" y="202" text-anchor="end" class="m" font-size="14" font-weight="700" fill="#c9d1d9">4</text>
+  </g>
+</svg>
