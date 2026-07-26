@@ -8,7 +8,11 @@ import { join } from 'node:path';
 const LOGIN = 'chevgan';
 const FEATURED = ['whydone', 'render-peek', 'react-ai-voice-visualizer'];
 // repo name -> npm package name; pins for these show last-month downloads
-const NPM_PACKAGES = { whydone: 'whydone' };
+const NPM_PACKAGES = {
+  whydone: 'whydone',
+  'render-peek': 'render-peek',
+  'react-ai-voice-visualizer': 'react-ai-voice-visualizer',
+};
 const OUT = process.argv.includes('--out')
   ? process.argv[process.argv.indexOf('--out') + 1]
   : 'dist';
