@@ -6,7 +6,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const LOGIN = 'chevgan';
-const FEATURED = ['render-peek', 'react-ai-voice-visualizer'];
+const FEATURED = ['whydone', 'render-peek', 'react-ai-voice-visualizer'];
 const OUT = process.argv.includes('--out')
   ? process.argv[process.argv.indexOf('--out') + 1]
   : 'dist';

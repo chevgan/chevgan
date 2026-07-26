@@ -32,6 +32,12 @@
 
 <div align="center">
 
+<a href="https://github.com/chevgan/whydone">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chevgan/chevgan/output/pin-whydone-dark.svg">
+    <img src="https://raw.githubusercontent.com/chevgan/chevgan/output/pin-whydone-light.svg" alt="whydone" width="49%">
+  </picture>
+</a>
 <a href="https://github.com/chevgan/render-peek">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chevgan/chevgan/output/pin-render-peek-dark.svg">
@@ -45,7 +51,7 @@
   </picture>
 </a>
 
-<sub>🔍 <b>render-peek</b> — a React hook for visually catching unnecessary re-renders &nbsp;·&nbsp; 🎙 <b>react-ai-voice-visualizer</b> — production-ready components for AI voice interfaces with real-time audio visualization</sub>
+<sub>📓 <b>whydone</b> — a decision log your AI writes and reads back: /log after a task, /recall before the next &nbsp;·&nbsp; 🔍 <b>render-peek</b> — a React hook for visually catching unnecessary re-renders &nbsp;·&nbsp; 🎙 <b>react-ai-voice-visualizer</b> — production-ready components for AI voice interfaces with real-time audio visualization</sub>
 
 </div>
 
