@@ -90,12 +90,33 @@ const data = await gql(`
     }
   }`, { login: LOGIN });
 
-// npm downloads (public API, no token) — baked into pins at generation time
+// npm ALL-TIME downloads (public APIs, no token) — baked into pins at
+// generation time. There is no single all-time endpoint: take the package's
+// creation date from the registry and sum ranges (the downloads API caps a
+// range at ~18 months per request).
+async function npmTotalDownloads(pkg) {
+  const meta = await fetch(`https://registry.npmjs.org/${pkg}`).then(r => (r.ok ? r.json() : null));
+  const created = meta?.time?.created;
+  if (!created) return null;
+  const iso = d => d.toISOString().slice(0, 10);
+  const DAY = 86_400_000;
+  let total = 0;
+  let start = new Date(created);
+  const today = new Date();
+  while (start <= today) {
+    const end = new Date(Math.min(start.getTime() + 540 * DAY, today.getTime()));
+    const r = await fetch(`https://api.npmjs.org/downloads/point/${iso(start)}:${iso(end)}/${pkg}`);
+    if (r.ok) total += (await r.json()).downloads ?? 0;
+    start = new Date(end.getTime() + DAY);
+  }
+  return total;
+}
+
 const npmDl = {};
 await Promise.all(Object.entries(NPM_PACKAGES).map(async ([repo, pkg]) => {
   try {
-    const r = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg}`);
-    if (r.ok) npmDl[repo] = (await r.json()).downloads ?? 0;
+    const total = await npmTotalDownloads(pkg);
+    if (total != null) npmDl[repo] = total;
   } catch { /* pin falls back to stars/forks only */ }
 }));
 
@@ -207,7 +228,7 @@ function pinCard(t, repo) {
   <text x="416" y="121" text-anchor="end" class="m" font-size="13" fill="${t.dim}">${[
     `★ ${fmt(r.stargazerCount)}`,
     `⑂ ${fmt(r.forkCount)}`,
-    ...(npmDl[repo] != null ? [`↓ ${fmt(npmDl[repo])}/mo`] : []),
+    ...(npmDl[repo] != null ? [`↓ ${fmt(npmDl[repo])}`] : []),
   ].join('\u2003')}</text>`;
   return shell(t, 440, 140, body);
 }
