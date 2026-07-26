@@ -7,6 +7,8 @@ import { join } from 'node:path';
 
 const LOGIN = 'chevgan';
 const FEATURED = ['whydone', 'render-peek', 'react-ai-voice-visualizer'];
+// repo name -> npm package name; pins for these show last-month downloads
+const NPM_PACKAGES = { whydone: 'whydone' };
 const OUT = process.argv.includes('--out')
   ? process.argv[process.argv.indexOf('--out') + 1]
   : 'dist';
@@ -83,6 +85,15 @@ const data = await gql(`
       }
     }
   }`, { login: LOGIN });
+
+// npm downloads (public API, no token) — baked into pins at generation time
+const npmDl = {};
+await Promise.all(Object.entries(NPM_PACKAGES).map(async ([repo, pkg]) => {
+  try {
+    const r = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg}`);
+    if (r.ok) npmDl[repo] = (await r.json()).downloads ?? 0;
+  } catch { /* pin falls back to stars/forks only */ }
+}));
 
 const u = data.user;
 const repos = u.repositories.nodes;
@@ -189,8 +200,11 @@ function pinCard(t, repo) {
   ${desc.map((line, i) => `<text x="24" y="${62 + i * 20}" class="b row r${i}" font-size="13" fill="${t.dim}">${esc(line)}</text>`).join('')}
   ${lang ? `<circle cx="30" cy="116" r="5" fill="${lang.color ?? t.dim}"/>
   <text x="42" y="121" class="b" font-size="13" fill="${t.text}">${esc(lang.name)}</text>` : ''}
-  <text x="330" y="121" class="m" font-size="13" fill="${t.dim}">★ ${fmt(r.stargazerCount)}</text>
-  <text x="386" y="121" class="m" font-size="13" fill="${t.dim}">⑂ ${fmt(r.forkCount)}</text>`;
+  <text x="416" y="121" text-anchor="end" class="m" font-size="13" fill="${t.dim}">${[
+    `★ ${fmt(r.stargazerCount)}`,
+    `⑂ ${fmt(r.forkCount)}`,
+    ...(npmDl[repo] != null ? [`↓ ${fmt(npmDl[repo])}/mo`] : []),
+  ].join('\u2003')}</text>`;
   return shell(t, 440, 140, body);
 }
 
