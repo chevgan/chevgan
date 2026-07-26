@@ -56,11 +56,3 @@
 </div>
 
 <br>
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,50:818cf8,100:e879f9&height=110&section=footer" width="100%">
-
-<sub>⚡ this profile is hand-written animated SVG — no generators · <a href="./assets">view source</a></sub>
-
-</div>
